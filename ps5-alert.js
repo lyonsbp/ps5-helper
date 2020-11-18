@@ -2,7 +2,7 @@ const axios = require("axios");
 const player = require("play-sound")({});
 
 async function checkForQueue() {
-  const resp = await axios.get("https://direct-queue.playstation.com/");
+  const resp = await axios.get("http://direct.playstation.com/");
 
   console.log(resp.data);
   if (resp.data.includes("<title>This is Queue-it</title>")) {
